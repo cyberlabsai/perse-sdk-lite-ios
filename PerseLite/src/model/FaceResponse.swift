@@ -1,5 +1,9 @@
 import Foundation
 
+public struct Compare402Response: Decodable {
+    public let message: String
+}
+
 public struct CompareResponse: Decodable {
     public let status: Int
     public let similarity: Float
