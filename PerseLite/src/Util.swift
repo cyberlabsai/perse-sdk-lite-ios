@@ -44,4 +44,20 @@ extension Data {
           throw error
         }
     }
+    
+    public func compare402Response() throws -> Compare402Response {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+            let response: Compare402Response = try decoder.decode(
+                Compare402Response.self,
+                from: self
+            )
+            
+            return response
+        } catch(let error) {
+          throw error
+        }
+    }
 }

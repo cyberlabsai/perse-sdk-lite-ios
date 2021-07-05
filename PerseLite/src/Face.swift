@@ -45,15 +45,15 @@ public class Face {
             method: .post,
             headers: headers
         ).responseString {
-            response in
+            result in
 
-            guard let uploadResponse: HTTPURLResponse = response.response else {
+            guard let uploadResponse: HTTPURLResponse = result.response else {
                 return
             }
 
             if uploadResponse.statusCode == 200 {
                 do {
-                    guard let detectResponse: DetectResponse = try response.data?.detectResponse() else {
+                    guard let detectResponse: DetectResponse = try result.data?.detectResponse() else {
                         return
                     }
                     onSuccess(detectResponse)
@@ -129,23 +129,36 @@ public class Face {
             method: .post,
             headers: headers
         ).responseString {
-            response in
-
-            guard let uploadResponse: HTTPURLResponse = response.response else {
+            result in
+            
+            guard let uploadResponse: HTTPURLResponse = result.response else {
                 return
             }
 
-            if uploadResponse.statusCode == 200 {
+            switch uploadResponse.statusCode {
+            case 200:
                 do {
-                    guard let compareResponse: CompareResponse = try response.data?.compareResponse() else {
+                    guard let compareResponse: CompareResponse = try result.data?.compareResponse() else {
                         return
                     }
                     onSuccess(compareResponse)
                 } catch let error {
                     onError("\(error)")
                 }
-            } else {
-                onError("\(uploadResponse.statusCode)")
+                return
+                    
+            case 402:
+                do {
+                    guard let response: Compare402Response = try result.data?.compare402Response() else {
+                        return
+                    }
+                    onError(response.message)
+                } catch let error {
+                    onError("\(error)")
+                }
+                return
+                
+            default: onError("\(uploadResponse.statusCode)")
             }
         }
     }
