@@ -7,7 +7,7 @@ public struct Compare402Response: Decodable {
 public struct CompareResponse: Decodable {
     public let status: Int
     public let similarity: Float
-    public let imageTokens: Array<String>
+    public let imageTokens: Array<String>?
     public let timeTaken: Float
 }
 
@@ -27,7 +27,7 @@ public struct MetricsResponse: Decodable {
 
 public struct FaceResponse: Decodable {
     public let boundingBox: Array<Int>
-    public let confidence: Int
+    public let confidence: Float
     public let faceMetrics: MetricsResponse
     public let landmarks: LandmarksResponse
     public let livenessScore: Float
@@ -37,7 +37,7 @@ public struct DetectResponse: Decodable {
     public let totalFaces: Int
     public let faces: Array<FaceResponse>
     public let imageMetrics: MetricsResponse
-    public let imageToken: String
+    public let imageToken: String?
     public let status: Int
     public let timeTaken: Float
 }

@@ -118,21 +118,13 @@ class PerseLiteCompareViewController:
                 "Similarity",
                 compareResponse.similarity
             ))
-            var i = 0
-            for imageToken in compareResponse.imageTokens {
-                i = i + 1
-                self.tablecells.append(TableCell(
-                    "Image Token \(i)",
-                    imageToken
-                ))
-            }
             self.tablecells.append(TableCell(
                 "Time Taken",
                 compareResponse.timeTaken
             ))
             self.tableView.reloadData()
         } onError: {
-            error in
+            status, error in
 
             debugPrint(error)
         }

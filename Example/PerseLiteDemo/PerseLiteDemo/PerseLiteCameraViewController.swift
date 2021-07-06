@@ -107,7 +107,7 @@ class PerseLiteCameraViewController:
                 value: detectResponse.imageMetrics.sharpness
             )
         } onError: {
-            error in
+            status, error in
             debugPrint(error)
             self.reset()
         }
@@ -282,7 +282,7 @@ class PerseLiteCameraViewController:
         value: Float?
     ) {
         if let value: Float = value {
-            label.text = value.description
+            label.text = value.toLabel()
             icon.image = validation
                 ? UIImage(systemName: "checkmark.circle.fill")
                 : UIImage(systemName: "multiply.circle.fill")
