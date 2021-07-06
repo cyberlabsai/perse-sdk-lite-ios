@@ -71,7 +71,7 @@ pod install
 4. Now, you can open and build your project with the extension `.xcworkspace`;
 
 > #### How to create a  Xcode project with CocoaPods?
-> TO create a Xcode project with CocoaPods you can see in the [Official CocoaPods Guide](https://guides.cocoapods.org/using/using-cocoapods.html#creating-a-new-xcode-project-with-cocoapods).
+> To create a Xcode project with CocoaPods you can see in the [Official CocoaPods Guide](https://guides.cocoapods.org/using/using-cocoapods.html#creating-a-new-xcode-project-with-cocoapods).
 
 ### API Key
 
@@ -181,6 +181,16 @@ class PerseLiteCameraViewController:
 }
 ```
 
+### Running Tests
+
+Important:
+* Need a [API KEY](#api-key);
+* Need the [XCode IDE](https://developer.apple.com/xcode/);
+
+You access it by clicking its icon in the navigator selector bar, located between the issue navigator and the debug navigator. When you have a project with a suite of tests defined, you see a navigator view similar to the one shown here.
+
+<img src="https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/Art/twx-qs-1_2x.png" width="236" height="402" />
+
 ## API
 
 This section describes the Perse SDK Lite iOS API's, [methods](#methods), your [responses](#responses) and possible [errors](#errors).
@@ -201,7 +211,7 @@ The Perse is in `alpha` version and for now, only the `Face` module is available
 func detect(
     _ filePath: String,
     onSuccess: @escaping (DetectResponse) -> Void,
-    onError: @escaping (String) -> Void
+    onError: @escaping (String, String) -> Void
 )
 ```
 
@@ -209,7 +219,7 @@ func detect(
 func detect(
     _ data: Data,
     onSuccess: @escaping (DetectResponse) -> Void,
-    onError: @escaping (String) -> Void
+    onError: @escaping (String, String) -> Void
 )
 ```
 
@@ -225,7 +235,7 @@ func compare(
     _ firstFilePath: String,
     _ secondFilePath: String,
     onSuccess: @escaping (CompareResponse) -> Void,
-    onError: @escaping (String) -> Void
+    onError: @escaping (String, String) -> Void
 )
 ```
 
@@ -234,7 +244,7 @@ func compare(
     _ firstFile: Data,
     _ secondFile: Data,
     onSuccess: @escaping (CompareResponse) -> Void,
-    onError: @escaping (String) -> Void
+    onError: @escaping (String, String) -> Void
 )
 ```
 
@@ -291,6 +301,10 @@ func compare(
 
 ### Errors
 
+The `onError`:
+* First parameter is the `Error Code`;
+* Second parameter is a raw text message;
+
 | Error Code | Description
 | -          | -
 | 400        | The request was unacceptable, often due to missing a required parameter.
@@ -307,4 +321,4 @@ Contributions are always welcome!
 
 ---
 
-Made with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/)
+Made with ❤  by the [**Cyberlabs AI**](https://cyberlabs.ai/)
