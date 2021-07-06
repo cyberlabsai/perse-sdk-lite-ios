@@ -6,14 +6,14 @@ public class Face {
     public func detect(
         _ filePath: String,
         onSuccess: @escaping (DetectResponse) -> Void,
-        onError: @escaping (String) -> Void
+        onError: @escaping (String, String) -> Void
     ) {
         guard let url = URL(string: filePath) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
         guard let data = try? Data(contentsOf: url) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
 
@@ -23,7 +23,7 @@ public class Face {
     public func detect(
         _ data: Data,
         onSuccess: @escaping (DetectResponse) -> Void,
-        onError: @escaping (String) -> Void
+        onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/detect")
         let headers: HTTPHeaders = [
@@ -58,10 +58,10 @@ public class Face {
                     }
                     onSuccess(detectResponse)
                 } catch let error {
-                    onError("\(error)")
+                    onError("\(error)", "")
                 }
             } else {
-                onError("\(uploadResponse.statusCode)")
+                onError("\(uploadResponse.statusCode)", "")
             }
         }
     }
@@ -70,22 +70,22 @@ public class Face {
         _ firstFilePath: String,
         _ secondFilePath: String,
         onSuccess: @escaping (CompareResponse) -> Void,
-        onError: @escaping (String) -> Void
+        onError: @escaping (String, String) -> Void
     ) {
         guard let firstUrl = URL(string: firstFilePath) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
         guard let secondUrl = URL(string: secondFilePath) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
         guard let firstData = try? Data(contentsOf: firstUrl) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
         guard let secondData = try? Data(contentsOf: secondUrl) else {
-            onError(PerseLite.Error.INVALID_IMAGE_PATH)
+            onError(PerseLite.Error.INVALID_IMAGE_PATH, "")
             return
         }
 
@@ -101,7 +101,7 @@ public class Face {
         _ firstFile: Data,
         _ secondFile: Data,
         onSuccess: @escaping (CompareResponse) -> Void,
-        onError: @escaping (String) -> Void
+        onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/compare")
         let headers: HTTPHeaders = [
@@ -143,7 +143,7 @@ public class Face {
                     }
                     onSuccess(compareResponse)
                 } catch let error {
-                    onError("\(error)")
+                    onError("\(error)", "")
                 }
                 return
                     
@@ -152,13 +152,13 @@ public class Face {
                     guard let response: Compare402Response = try result.data?.compare402Response() else {
                         return
                     }
-                    onError(response.message)
+                    onError("\(uploadResponse.statusCode)", response.message)
                 } catch let error {
-                    onError("\(error)")
+                    onError("\(error)", "")
                 }
                 return
                 
-            default: onError("\(uploadResponse.statusCode)")
+            default: onError("\(uploadResponse.statusCode)", "")
             }
         }
     }

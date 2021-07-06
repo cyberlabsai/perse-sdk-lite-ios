@@ -150,7 +150,7 @@ class PerseLiteDetectViewController:
             }
             self.tablecells.append(TableCell(
                 "Image Token",
-                detectResponse.imageToken
+                detectResponse.imageToken ?? ""
             ))
             self.tablecells.append(TableCell("Image Metrics"))
             self.tablecells.append(TableCell(
@@ -168,7 +168,7 @@ class PerseLiteDetectViewController:
 
             self.tableView.reloadData()
         } onError: {
-            error in
+            status, error in
 
             debugPrint(error)
         }
