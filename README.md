@@ -27,6 +27,7 @@ For more details, you can see the [Official Perse](https://www.getperse.com/).
   * [Face Detect](#face-detect)
   * [Face Compare](#face-compare)
   * [Camera Integration](#camera-integration)
+  * [Running Tests](#running-tests)
 * [API](#api)
   * [Methods](#methods)
     * [face.detect](#face.detect)
