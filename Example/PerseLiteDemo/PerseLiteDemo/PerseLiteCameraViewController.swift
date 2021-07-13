@@ -69,16 +69,16 @@ class PerseLiteCameraViewController:
                 )
             )
         let image = UIImage(contentsOfFile: subpath)
-        self.faceImageView.image = image
 
         self.perseLite.face.detect(imagePath) {
             detectResponse in
-
+            
             if detectResponse.totalFaces == 0 {
                 self.reset()
                 return
             }
 
+            self.faceImageView.image = image
             let face: FaceResponse = detectResponse.faces[0]
 
             self.setSpoofingValidation(valid: face.livenessScore >= 0.7)
@@ -108,7 +108,7 @@ class PerseLiteCameraViewController:
             )
         } onError: {
             status, error in
-            debugPrint(error)
+            debugPrint(status)
             self.reset()
         }
     }

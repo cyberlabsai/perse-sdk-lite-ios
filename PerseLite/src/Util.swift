@@ -22,7 +22,6 @@ extension Data {
                 DetectResponse.self,
                 from: self
             )
-            
             return response
         } catch(let error) {
           throw error
@@ -38,7 +37,6 @@ extension Data {
                 CompareResponse.self,
                 from: self
             )
-            
             return response
         } catch(let error) {
           throw error

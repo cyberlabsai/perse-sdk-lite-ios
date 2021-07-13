@@ -1,6 +1,6 @@
 import UIKit
 
-public class PerseLite {
+open class PerseLite {
 
     public struct Error {
         public static let INVALID_IMAGE_PATH = "INVALID_IMAGE_PATH"

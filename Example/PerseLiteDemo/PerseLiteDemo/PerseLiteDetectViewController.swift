@@ -130,10 +130,6 @@ class PerseLiteDetectViewController:
                         boundingBox.description
                     ))
                 }
-                self.tablecells.append(TableCell(
-                    "Confidence",
-                    face.confidence
-                ))
                 self.tablecells.append(TableCell("Face Metrics \(i)"))
                 self.tablecells.append(TableCell(
                     "Overexpose",
@@ -148,10 +144,6 @@ class PerseLiteDetectViewController:
                     face.faceMetrics.sharpness
                 ))
             }
-            self.tablecells.append(TableCell(
-                "Image Token",
-                detectResponse.imageToken ?? ""
-            ))
             self.tablecells.append(TableCell("Image Metrics"))
             self.tablecells.append(TableCell(
                 "Overexpose",
