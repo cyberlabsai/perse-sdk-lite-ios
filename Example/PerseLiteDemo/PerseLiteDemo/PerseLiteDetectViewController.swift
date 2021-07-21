@@ -113,7 +113,7 @@ class PerseLiteDetectViewController:
             guard let faces = detectResponse.faces as Array<FaceResponse>? else {
                 return
             }
-
+            
             var i = 0
             for face in faces {
                 i = i + 1

@@ -61,7 +61,6 @@
 		5C41242826554C8C00C02049 /* PerseLiteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteUtils.swift; sourceTree = "<group>"; };
 		5C412452265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteFaceCompareWithFileTests.swift; sourceTree = "<group>"; };
 		5C73AAD42681184E0028435B /* PerseLiteCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteCameraViewController.swift; sourceTree = "<group>"; };
-		5CB416A82652EEF600B7D1EC /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5CB416AA2652F08E00B7D1EC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5CE123D7264AF36600D484A1 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		5CE123EC264B087800D484A1 /* PerseLiteCompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteCompareViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		6176EFB5252E496C00F4D4DD = {
 			isa = PBXGroup;
 			children = (
-				5CB416A82652EEF600B7D1EC /* Development.xcconfig */,
 				5C06E54725D1F09A00E6770F /* Podfile */,
 				6176EFC0252E496D00F4D4DD /* PerseLiteDemo */,
 				5CF64E682653F51F004763E3 /* PerseLiteDemoTests */,
@@ -484,7 +482,6 @@
 		};
 		6176EFD0252E496F00F4D4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB416A82652EEF600B7D1EC /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

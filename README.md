@@ -1,3 +1,4 @@
+<img src="https://raw.githubusercontent.com/cyberlabsai/perse-sdk-lite-ios/main/assets/logo_cyberlabs.png" width="300" />
 
 # Perse SDK Lite iOS
 From [CyberLabs.AI](https://cyberlabs.ai/).  
@@ -10,13 +11,13 @@ The Perse CocoaPods SDK Lite:
 * Compare the similarity between two faces;
 * Doesn't store any photos;
 
-<img src="perseLite.gif" width="300" />
+<img src="https://raw.githubusercontent.com/cyberlabsai/perse-sdk-lite-ios/main/assets/anti_spoof.gif" width="300" />
 
 For more details, you can see the [Official Perse](https://www.getperse.com/).
 
 > #### Soon voice biometric verification.
 
-## Content of Table
+## Table of Contents
 
 * [About](#about)
 * [Get Started](#get-started)
@@ -48,7 +49,7 @@ This SDK provides abstracts the communication with the Perse's API endpoints and
 ). Do not forget your [API Key](#get-api-key).
 
 > #### Want to try a backend client?
-> We have some examples in `Python`, `Go` and `javaScript`.
+> We have some examples in `Python`, `Go` and `JavaScript`.
 > You can see documented [here](https://docs.getperse.com/face-api/#introduction).
 
 ## Get Started
@@ -190,7 +191,7 @@ Important:
 
 You access it by clicking its icon in the navigator selector bar, located between the issue navigator and the debug navigator. When you have a project with a suite of tests defined, you see a navigator view similar to the one shown here.
 
-<img src="https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/Art/twx-qs-1_2x.png" width="236" height="402" />
+<img src="assets/testing_with_xcode.png" width="236" height="402" />
 
 ## API
 
@@ -249,9 +250,6 @@ func compare(
 )
 ```
 
-> #### Tip
-> We recommend considering a match when similarity is above `71`.
-
 ### Responses
 
 #### CompareResponse
@@ -262,6 +260,12 @@ func compare(
 | timeTaken  | `Float`         | Time taken to analyze the image.
 | raw | `String?` | The API response in string.
 
+#### CompareThreshold
+
+| Attribute    | Type                                | Description
+| -            | -                                   | -
+| similarityThreshold  | `Float` | Default similarity threshold value.
+
 #### DetectResponse
 
 | Attribute    | Type                                | Description
@@ -271,6 +275,15 @@ func compare(
 | imageMetrics | [MetricsResponse](#metricsresponse) | Metrics of the detected image.
 | timeTaken    | `Float`                             | Time taken to analyze the image.
 | raw | `String?` | The API response in string. 
+
+#### DetectThresholds
+
+| Attribute    | Type                                | Description
+| -            | -                                   | -
+| underexposerThreshold  | `Float` | Default loss of shadow threshold value.
+| overexposureThreshold   | `Float` | Default loss of highlight threshold value. 
+| sharpnessThreshold        | `Float` | Default intensity of motion blur threshold value.
+| livenessThreshold           | `Float` | Default confidence that a detected face is from a live person threshold value.
 
 #### FaceResponse
 
@@ -308,7 +321,7 @@ The `onError`:
 | Error Code | Description
 | -          | -
 | 400        | The request was unacceptable, often due to missing a required parameter.
-| 401        | API key is missing or invalid.
+| 403        | API key is missing or invalid.
 | 402        | The parameters were valid but the request failed.
 | 415        | The content type or encoding is not valid.
 
