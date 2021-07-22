@@ -77,33 +77,35 @@ class PerseLiteCameraViewController:
                 self.reset()
                 return
             }
-
+            
             self.faceImageView.image = image
             let face: FaceResponse = detectResponse.faces[0]
 
-            self.setSpoofingValidation(valid: face.livenessScore >= 0.7)
+            self.setSpoofingValidation(
+                valid: face.livenessScore >= detectResponse.defaultThresholds.livenessThreshold
+            )
             self.handleDisplayProbability(
                 label: self.faceUnderexposeLabel,
                 icon: self.faceUnderexposeIcon,
-                validation: face.faceMetrics.underexpose > 0.7,
+                validation: face.faceMetrics.underexpose > detectResponse.defaultThresholds.underexposerThreshold,
                 value: face.faceMetrics.underexpose
             )
             self.handleDisplayProbability(
                 label: self.faceSharpnessLabel,
                 icon: self.faceSharpnessIcon,
-                validation: face.faceMetrics.sharpness < 0.07,
+                validation: face.faceMetrics.sharpness < detectResponse.defaultThresholds.sharpnessThreshold,
                 value: face.faceMetrics.sharpness
             )
             self.handleDisplayProbability(
                 label: self.imageUnderexposeLabel,
                 icon: self.imageUnderexposeIcon,
-                validation: detectResponse.imageMetrics.underexpose > 0.7,
+                validation: detectResponse.imageMetrics.underexpose > detectResponse.defaultThresholds.underexposerThreshold,
                 value: detectResponse.imageMetrics.underexpose
             )
             self.handleDisplayProbability(
                 label: self.imageSharpnessLabel,
                 icon: self.imageSharpnessIcon,
-                validation: detectResponse.imageMetrics.sharpness < 0.07,
+                validation: detectResponse.imageMetrics.sharpness < detectResponse.defaultThresholds.sharpnessThreshold,
                 value: detectResponse.imageMetrics.sharpness
             )
         } onError: {
