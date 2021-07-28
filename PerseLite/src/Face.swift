@@ -50,13 +50,12 @@ public class Face {
             guard let uploadResponse: HTTPURLResponse = result.response else {
                 return
             }
-
+            
             if uploadResponse.statusCode == 200 {
                 do {
-                    guard var detectResponse: DetectResponse = try result.data?.detectResponse() else {
+                    guard let detectResponse: DetectResponse = try result.data?.detectResponse() else {
                         return
                     }
-                    detectResponse.raw = result.value
                     onSuccess(detectResponse)
                 } catch let error {
                     onError("\(error)", "")
@@ -139,10 +138,9 @@ public class Face {
             switch uploadResponse.statusCode {
             case 200:
                 do {
-                    guard var compareResponse: CompareResponse = try result.data?.compareResponse() else {
+                    guard let compareResponse: CompareResponse = try result.data?.compareResponse() else {
                         return
                     }
-                    compareResponse.raw = result.value
                     onSuccess(compareResponse)
                 } catch let error {
                     onError("\(error)", "")
