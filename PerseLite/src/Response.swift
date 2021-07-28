@@ -5,7 +5,7 @@ public struct Compare402Response: Decodable {
 }
 
 public struct CompareThreshold: Decodable {
-    public let similarityThreshold: Float
+    public let similarity: Float
 }
 
 public struct CompareResponse: Decodable {
@@ -13,7 +13,6 @@ public struct CompareResponse: Decodable {
     public let similarity: Float
     public let timeTaken: Float
     public let defaultThreshold: CompareThreshold
-    public var raw: String?
 }
 
 public struct LandmarksResponse: Decodable {
@@ -25,9 +24,9 @@ public struct LandmarksResponse: Decodable {
 }
 
 public struct MetricsResponse: Decodable {
-    public let overexpose: Float
+    public let overexposure: Float
     public let sharpness: Float
-    public let underexpose: Float
+    public let underexposure: Float
 }
 
 public struct FaceResponse: Decodable {
@@ -38,10 +37,10 @@ public struct FaceResponse: Decodable {
 }
 
 public struct DetectThresholds: Decodable {
-    public let overexposureThreshold: Float
-    public let sharpnessThreshold: Float
-    public let underexposerThreshold: Float
-    public let livenessThreshold: Float
+    public let overexposure: Float
+    public let sharpness: Float
+    public let underexposure: Float
+    public let liveness: Float
 }
 
 public struct DetectResponse: Decodable {
@@ -51,5 +50,4 @@ public struct DetectResponse: Decodable {
     public let status: Int
     public let timeTaken: Float
     public let defaultThresholds: DetectThresholds
-    public var raw: String?
 }

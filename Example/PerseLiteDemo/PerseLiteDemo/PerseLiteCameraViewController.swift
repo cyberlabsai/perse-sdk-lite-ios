@@ -48,6 +48,10 @@ class PerseLiteCameraViewController:
         self.cameraView.setSaveImageCaptured(true)
         self.cameraView.setDetectionBox(true)
         self.cameraView.setFaceContours(true)
+        self.cameraView.detectionTopSize = 0.2
+        self.cameraView.detectionRightSize = 0.2
+        self.cameraView.detectionBottomSize = 0.2
+        self.cameraView.detectionLeftSize = 0.2
         self.cameraView.setTimeBetweenImages(1000)
         self.cameraView.startCaptureType("face")
     }
@@ -82,30 +86,30 @@ class PerseLiteCameraViewController:
             let face: FaceResponse = detectResponse.faces[0]
 
             self.setSpoofingValidation(
-                valid: face.livenessScore >= detectResponse.defaultThresholds.livenessThreshold
+                valid: face.livenessScore >= detectResponse.defaultThresholds.liveness
             )
             self.handleDisplayProbability(
                 label: self.faceUnderexposeLabel,
                 icon: self.faceUnderexposeIcon,
-                validation: face.faceMetrics.underexpose > detectResponse.defaultThresholds.underexposerThreshold,
-                value: face.faceMetrics.underexpose
+                validation: face.faceMetrics.underexposure > detectResponse.defaultThresholds.underexposure,
+                value: face.faceMetrics.underexposure
             )
             self.handleDisplayProbability(
                 label: self.faceSharpnessLabel,
                 icon: self.faceSharpnessIcon,
-                validation: face.faceMetrics.sharpness < detectResponse.defaultThresholds.sharpnessThreshold,
+                validation: face.faceMetrics.sharpness < detectResponse.defaultThresholds.sharpness,
                 value: face.faceMetrics.sharpness
             )
             self.handleDisplayProbability(
                 label: self.imageUnderexposeLabel,
                 icon: self.imageUnderexposeIcon,
-                validation: detectResponse.imageMetrics.underexpose > detectResponse.defaultThresholds.underexposerThreshold,
-                value: detectResponse.imageMetrics.underexpose
+                validation: detectResponse.imageMetrics.underexposure > detectResponse.defaultThresholds.underexposure,
+                value: detectResponse.imageMetrics.underexposure
             )
             self.handleDisplayProbability(
                 label: self.imageSharpnessLabel,
                 icon: self.imageSharpnessIcon,
-                validation: detectResponse.imageMetrics.sharpness < detectResponse.defaultThresholds.sharpnessThreshold,
+                validation: detectResponse.imageMetrics.sharpness < detectResponse.defaultThresholds.sharpness,
                 value: detectResponse.imageMetrics.sharpness
             )
         } onError: {

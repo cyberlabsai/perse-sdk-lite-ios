@@ -132,12 +132,12 @@ class PerseLiteDetectViewController:
                 }
                 self.tablecells.append(TableCell("Face Metrics \(i)"))
                 self.tablecells.append(TableCell(
-                    "Overexpose",
-                    face.faceMetrics.overexpose
+                    "Overexposure",
+                    face.faceMetrics.overexposure
                 ))
                 self.tablecells.append(TableCell(
                     "Underexpose",
-                    face.faceMetrics.underexpose
+                    face.faceMetrics.underexposure
                 ))
                 self.tablecells.append(TableCell(
                     "Sharpness",
@@ -146,12 +146,12 @@ class PerseLiteDetectViewController:
             }
             self.tablecells.append(TableCell("Image Metrics"))
             self.tablecells.append(TableCell(
-                "Overexpose",
-                detectResponse.imageMetrics.overexpose
+                "Overexposure",
+                detectResponse.imageMetrics.overexposure
             ))
             self.tablecells.append(TableCell(
                 "Underexpose",
-                detectResponse.imageMetrics.underexpose
+                detectResponse.imageMetrics.underexposure
             ))
             self.tablecells.append(TableCell(
                 "Sharpness",
