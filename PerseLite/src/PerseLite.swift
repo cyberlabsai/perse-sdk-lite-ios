@@ -19,11 +19,15 @@ open class PerseLite {
     }
 
     static var apiKey: String!
-    static var url: String = "https://api.getperse.com/v0/"
+    static var url: String!
 
     public var face = Face()
 
-    public init(apiKey: String) {
+    /**
+     *  Constructor to initialize the Perse class and Retrofit API instance.
+     */
+    public init(apiKey: String, baseUrl: String = "https://api.getperse.com/v0/") {
         PerseLite.apiKey = apiKey
+        PerseLite.url = baseUrl
     }
 }
