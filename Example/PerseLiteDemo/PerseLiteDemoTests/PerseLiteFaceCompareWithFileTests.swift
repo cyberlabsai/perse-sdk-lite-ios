@@ -12,7 +12,7 @@ class PerseLiteFaceCompareWithFileTests: XCTestCase {
             apiKey: Environment.apiKey
         ) { response in
             XCTAssertEqual(response.status, 200)
-            XCTAssertGreaterThan(response.similarity, 70.0)
+            XCTAssertGreaterThan(response.similarity, response.defaultThresholds.similarity)
         } onError: { error in
             XCTFail("Error on compare: \(error)")
         }
@@ -26,7 +26,7 @@ class PerseLiteFaceCompareWithFileTests: XCTestCase {
             apiKey: Environment.apiKey
         ) { response in
             XCTAssertEqual(response.status, 200)
-            XCTAssertLessThan(response.similarity, 80.0)
+            XCTAssertLessThan(response.similarity, response.defaultThresholds.similarity)
         } onError: { error in
             XCTFail("Error on compare: \(error)")
         }
@@ -80,7 +80,7 @@ class PerseLiteFaceCompareWithFileTests: XCTestCase {
         ) { detectResponse in
             XCTFail("Back-end authorized invalid api token.")
         } onError: { error in
-            XCTAssertEqual(error, "403")
+            XCTAssertEqual(error, "401")
         }
     }
 
