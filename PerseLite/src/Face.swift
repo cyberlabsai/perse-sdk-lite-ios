@@ -1,8 +1,23 @@
+/**
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * Perse SDK Lite iOS
+ * More About: https://www.getperse.com/
+ * From CyberLabs.AI: https://cyberlabs.ai/
+ * Haroldo Teruya @ Cyberlabs AI 2021
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ */
+
 import Foundation
 import Alamofire
 
+/**
+ * This class has the functions responsible to call API and retrieve the Response.
+ */
 public class Face {
 
+    /**
+     * Send Image by Image Path to API and return the DetectResponse Object
+     */
     public func detect(
         _ filePath: String,
         onSuccess: @escaping (DetectResponse) -> Void,
@@ -20,6 +35,9 @@ public class Face {
         self.detect(data, onSuccess: onSuccess, onError: onError)
     }
 
+    /**
+     * Send Image by Data to API and return the DetectResponse Object
+     */
     public func detect(
         _ data: Data,
         onSuccess: @escaping (DetectResponse) -> Void,
@@ -66,6 +84,9 @@ public class Face {
         }
     }
 
+    /**
+     * Send two Images by Image Path to API to return the CompareResponse of the API
+     */
     public func compare(
         _ firstFilePath: String,
         _ secondFilePath: String,
@@ -97,6 +118,9 @@ public class Face {
         )
     }
 
+    /**
+     * Send two Images by Data to API to return the CompareResponse of the API
+     */
     public func compare(
         _ firstFile: Data,
         _ secondFile: Data,

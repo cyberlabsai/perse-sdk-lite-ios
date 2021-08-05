@@ -1,4 +1,17 @@
+/**
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * Perse SDK Lite iOS
+ * More About: https://www.getperse.com/
+ * From CyberLabs.AI: https://cyberlabs.ai/
+ * Haroldo Teruya @ Cyberlabs AI 2021
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ */
+
 import Foundation
+
+/**
+ * Models to wrapper the API Response.
+ */
 
 public struct Compare402Response: Decodable {
     public let message: String
