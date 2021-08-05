@@ -1,10 +1,23 @@
+/**
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * Perse SDK Lite iOS
+ * More About: https://www.getperse.com/
+ * From CyberLabs.AI: https://cyberlabs.ai/
+ * Haroldo Teruya @ Cyberlabs AI 2021
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ */
+
 import Foundation
+
+/**
+ * Models to wrapper the API Response.
+ */
 
 public struct Compare402Response: Decodable {
     public let message: String
 }
 
-public struct CompareThreshold: Decodable {
+public struct CompareThresholds: Decodable {
     public let similarity: Float
 }
 
@@ -12,7 +25,7 @@ public struct CompareResponse: Decodable {
     public let status: Int
     public let similarity: Float
     public let timeTaken: Float
-    public let defaultThreshold: CompareThreshold
+    public let defaultThresholds: CompareThresholds
 }
 
 public struct LandmarksResponse: Decodable {

@@ -36,7 +36,7 @@ class PerseLiteFaceDetectWithFileTests: XCTestCase {
         ) { detectResponse in
             XCTFail("Back-end authorized invalid api token.")
         } onError: { error in
-            XCTAssertEqual(error, "403")
+            XCTAssertEqual(error, "401")
         }
     }
 
