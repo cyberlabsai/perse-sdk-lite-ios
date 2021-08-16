@@ -35,7 +35,10 @@ class PerseLiteCameraViewController:
     @IBOutlet var imageSharpnessLabel: UILabel!
     @IBOutlet var imageSharpnessIcon: UIImageView!
 
-    let perseLite = PerseLite(apiKey: Environment.apiKey)
+    let perseLite = PerseLite(
+        apiKey: Environment.apiKey,
+        baseUrl: Environment.baseUrl
+    )
     var image: UIImage?
 
     override func viewDidLoad() {
