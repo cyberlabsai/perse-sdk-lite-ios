@@ -8,7 +8,11 @@ class PerseLiteDetectViewController:
     UITableViewDelegate,
     UITableViewDataSource
 {
-    let perseLite = PerseLite(apiKey: Environment.apiKey)
+    let perseLite = PerseLite(
+        apiKey: Environment.apiKey,
+        baseUrl: Environment.baseUrl
+    )
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
 
