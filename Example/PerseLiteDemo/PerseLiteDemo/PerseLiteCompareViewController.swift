@@ -8,7 +8,11 @@ class PerseLiteCompareViewController:
     UITableViewDelegate,
     UITableViewDataSource
 {
-    let perseLite = PerseLite(apiKey: Environment.apiKey)
+    let perseLite = PerseLite(
+        apiKey: Environment.apiKey,
+        baseUrl: Environment.baseUrl
+    )
+    
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var secondImageView: UIImageView!
     @IBOutlet var tableView: UITableView!

@@ -19,7 +19,7 @@ public func detectWithFile(
     }
 
     // Start the face detect process.
-    PerseLite(apiKey: apiKey)
+    PerseLite(apiKey: apiKey, baseUrl: Environment.baseUrl)
         .face
         .detect(tempFilePath)
     {
@@ -53,9 +53,9 @@ public func detectWithData(
         expectation.fulfill()
         return
     }
-
+    
     // Start the face detect process.
-    PerseLite(apiKey: apiKey)
+    PerseLite(apiKey: apiKey, baseUrl: Environment.baseUrl)
         .face
         .detect(data)
     {
@@ -99,7 +99,7 @@ public func compareWithFile(
     }
 
     // Start the face detect process.
-    PerseLite(apiKey: apiKey)
+    PerseLite(apiKey: apiKey, baseUrl: Environment.baseUrl)
         .face
         .compare(
             firstTempFilePath,
@@ -145,7 +145,7 @@ public func compareWithData(
     }
 
     // Start the face detect process.
-    PerseLite(apiKey: apiKey)
+    PerseLite(apiKey: apiKey, baseUrl: Environment.baseUrl)
         .face
         .compare(
             firstData,
