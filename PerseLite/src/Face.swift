@@ -20,7 +20,7 @@ public class Face {
      */
     public func detect(
         _ filePath: String,
-        onSuccess: @escaping (DetectResponse) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Detect) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         guard let url = URL(string: filePath) else {
@@ -32,7 +32,11 @@ public class Face {
             return
         }
 
-        self.detect(data, onSuccess: onSuccess, onError: onError)
+        self.detect(
+            data,
+            onSuccess: onSuccess,
+            onError: onError
+        )
     }
 
     /**
@@ -40,7 +44,7 @@ public class Face {
      */
     public func detect(
         _ data: Data,
-        onSuccess: @escaping (DetectResponse) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Detect) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/detect")
@@ -71,7 +75,7 @@ public class Face {
             
             if uploadResponse.statusCode == 200 {
                 do {
-                    guard let detectResponse: DetectResponse = try result.data?.detectResponse() else {
+                    guard let detectResponse: PerseAPIResponse.Face.Detect = try result.data?.detectResponse() else {
                         return
                     }
                     onSuccess(detectResponse)
@@ -90,7 +94,7 @@ public class Face {
     public func compare(
         _ firstFilePath: String,
         _ secondFilePath: String,
-        onSuccess: @escaping (CompareResponse) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Compare) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         guard let firstUrl = URL(string: firstFilePath) else {
@@ -124,7 +128,7 @@ public class Face {
     public func compare(
         _ firstFile: Data,
         _ secondFile: Data,
-        onSuccess: @escaping (CompareResponse) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Compare) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/compare")
@@ -162,7 +166,7 @@ public class Face {
             switch uploadResponse.statusCode {
             case 200:
                 do {
-                    guard let compareResponse: CompareResponse = try result.data?.compareResponse() else {
+                    guard let compareResponse: PerseAPIResponse.Face.Compare = try result.data?.compareResponse() else {
                         return
                     }
                     onSuccess(compareResponse)
@@ -173,7 +177,7 @@ public class Face {
                     
             case 402:
                 do {
-                    guard let response: Compare402Response = try result.data?.compare402Response() else {
+                    guard let response: PerseAPIResponse.Face.Compare402 = try result.data?.compare402Response() else {
                         return
                     }
                     onError("\(uploadResponse.statusCode)", response.message)

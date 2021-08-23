@@ -53,7 +53,7 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - PerseLite (0.1.1):
+  - PerseLite (0.2.1):
     - Alamofire (~> 5.2)
   - PromisesObjC (1.2.12)
   - Protobuf (3.17.0)
@@ -100,7 +100,7 @@ SPEC CHECKSUMS:
   MLKitFaceDetection: 5b92261dd6e4205e3dab0df62537ac3f4e90e5db
   MLKitVision: 51385878c9100024478971856510f9271ff555b5
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  PerseLite: c2e15268b26a31196ef651597309d49a9008e2ce
+  PerseLite: 2de2ecd713a7010a876b2648a109b3b0188ae54b
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
   YoonitCamera: b42e7405363e882952dc5575e74cc40ec088d989

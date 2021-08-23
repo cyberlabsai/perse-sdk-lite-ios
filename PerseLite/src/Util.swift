@@ -22,13 +22,13 @@ extension URL {
 
 extension Data {
     
-    public func detectResponse() throws -> DetectResponse {
+    public func detectResponse() throws -> PerseAPIResponse.Face.Detect {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: DetectResponse = try decoder.decode(
-                DetectResponse.self,
+            let response: PerseAPIResponse.Face.Detect = try decoder.decode(
+                PerseAPIResponse.Face.Detect.self,
                 from: self
             )
             return response
@@ -37,13 +37,13 @@ extension Data {
         }
     }
     
-    public func compareResponse() throws -> CompareResponse {
+    public func compareResponse() throws -> PerseAPIResponse.Face.Compare {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: CompareResponse = try decoder.decode(
-                CompareResponse.self,
+            let response: PerseAPIResponse.Face.Compare = try decoder.decode(
+                PerseAPIResponse.Face.Compare.self,
                 from: self
             )
             return response
@@ -52,13 +52,13 @@ extension Data {
         }
     }
     
-    public func compare402Response() throws -> Compare402Response {
+    public func compare402Response() throws -> PerseAPIResponse.Face.Compare402 {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: Compare402Response = try decoder.decode(
-                Compare402Response.self,
+            let response: PerseAPIResponse.Face.Compare402 = try decoder.decode(
+                PerseAPIResponse.Face.Compare402.self,
                 from: self
             )
             

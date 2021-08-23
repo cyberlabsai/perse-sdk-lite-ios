@@ -86,7 +86,7 @@ class PerseLiteCameraViewController:
             }
             
             self.faceImageView.image = image
-            let face: FaceResponse = detectResponse.faces[0]
+            let face: PerseAPIResponse.Face.Face = detectResponse.faces[0]
 
             self.setSpoofingValidation(
                 valid: face.livenessScore >= detectResponse.defaultThresholds.liveness

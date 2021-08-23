@@ -6,7 +6,7 @@ public func detectWithFile(
     _ xctest: XCTestCase,
     imageName: String,
     apiKey: String,
-    onSuccess: @escaping (DetectResponse) -> Void,
+    onSuccess: @escaping (PerseAPIResponse.Face.Detect) -> Void,
     onError: @escaping (String) -> Void
 ) {
     let expectation = XCTestExpectation(description: "PerseLite face detect in a image.")
@@ -42,7 +42,7 @@ public func detectWithData(
     _ xctest: XCTestCase,
     imageName: String,
     apiKey: String,
-    onSuccess: @escaping (DetectResponse) -> Void,
+    onSuccess: @escaping (PerseAPIResponse.Face.Detect) -> Void,
     onError: @escaping (String) -> Void
 ) {
     let expectation = XCTestExpectation(description: "PerseLite face detect in a image.")
@@ -79,7 +79,7 @@ public func compareWithFile(
     firstImageName: String,
     secondImageName: String,
     apiKey: String,
-    onSuccess: @escaping (CompareResponse) -> Void,
+    onSuccess: @escaping (PerseAPIResponse.Face.Compare) -> Void,
     onError: @escaping (String) -> Void
 ) {
     let expectation = XCTestExpectation(description: "PerseLite face compare.")
@@ -125,7 +125,7 @@ public func compareWithData(
     firstImageName: String,
     secondImageName: String,
     apiKey: String,
-    onSuccess: @escaping (CompareResponse) -> Void,
+    onSuccess: @escaping (PerseAPIResponse.Face.Compare) -> Void,
     onError: @escaping (String) -> Void
 ) {
     let expectation = XCTestExpectation(description: "PerseLite face compare.")
