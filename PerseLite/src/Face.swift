@@ -15,6 +15,8 @@ import Alamofire
  */
 public class Face {
 
+    public var enrollment = Enrollment()
+    
     /**
      * Send Image by Image Path to API and return the DetectResponse Object
      */

@@ -67,4 +67,32 @@ public struct PerseAPIResponse {
             public let defaultThresholds: CompareThresholds
         }
     }
+    
+    public struct Enrollment {
+        public struct Face {
+            public struct Create: Decodable {
+                public let userToken: String
+                public let timeTaken: Float
+                public let status: Int
+            }
+            
+            public struct Read: Decodable {
+                public let userTokens: Array<String>
+                public let totalUsers: Int
+                public let timeTaken: Float
+                public let status: Int
+            }
+            
+            public struct Update: Decodable {
+                public let userToken: String
+                public let timeTaken: Float
+                public let status: Int
+            }
+            
+            public struct Delete: Decodable {
+                public let timeTaken: Float
+                public let status: Int
+            }
+        }
+    }
 }

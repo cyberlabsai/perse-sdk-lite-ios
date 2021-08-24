@@ -67,4 +67,64 @@ extension Data {
           throw error
         }
     }
+    
+    public func createResponse() throws -> PerseAPIResponse.Enrollment.Face.Create {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+            let response: PerseAPIResponse.Enrollment.Face.Create = try decoder.decode(
+                PerseAPIResponse.Enrollment.Face.Create.self,
+                from: self
+            )
+            return response
+        } catch(let error) {
+          throw error
+        }
+    }
+    
+    public func uploadResponse() throws -> PerseAPIResponse.Enrollment.Face.Update {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+            let response: PerseAPIResponse.Enrollment.Face.Update = try decoder.decode(
+                PerseAPIResponse.Enrollment.Face.Update.self,
+                from: self
+            )
+            return response
+        } catch(let error) {
+          throw error
+        }
+    }
+    
+    public func readResponse() throws -> PerseAPIResponse.Enrollment.Face.Read {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+            let response: PerseAPIResponse.Enrollment.Face.Read = try decoder.decode(
+                PerseAPIResponse.Enrollment.Face.Read.self,
+                from: self
+            )
+            return response
+        } catch(let error) {
+          throw error
+        }
+    }
+    
+    public func deleteResponse() throws -> PerseAPIResponse.Enrollment.Face.Delete {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+            let response: PerseAPIResponse.Enrollment.Face.Delete = try decoder.decode(
+                PerseAPIResponse.Enrollment.Face.Delete.self,
+                from: self
+            )
+            return response
+        } catch(let error) {
+          throw error
+        }
+    }
 }
