@@ -2,7 +2,7 @@ import XCTest
 import PerseLite
 import Foundation
 
-class PerseLiteFaceDetectWithFileTests: XCTestCase {
+class FaceDetectWithFileTests: XCTestCase {
 
     func testWithHuman() {
         detectWithFile(

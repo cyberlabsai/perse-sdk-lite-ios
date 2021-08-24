@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 func getTempData(name: String) -> Data? {
-    guard let fileUrl: URL = Bundle(for: PerseLiteFaceDetectWithDataTests.self)
+    guard let fileUrl: URL = Bundle(for: FaceDetectWithDataTests.self)
         .url(
             forResource: name,
             withExtension: "jpeg"

@@ -2,7 +2,7 @@ import XCTest
 import PerseLite
 import Foundation
 
-class PerseLiteFaceDetectWithDataTests: XCTestCase {
+class FaceDetectWithDataTests: XCTestCase {
 
     func testWithHuman() {
         detectWithData(
@@ -48,7 +48,10 @@ class PerseLiteFaceDetectWithDataTests: XCTestCase {
         ) { detectResponse in
             XCTFail("")
         } onError: { error in
-            XCTAssertEqual(error, PerseLite.Error.INVALID_IMAGE_PATH)
+            XCTAssertEqual(
+                error,
+                PerseLite.Error.INVALID_IMAGE_PATH
+            )
         }
     }
 }
