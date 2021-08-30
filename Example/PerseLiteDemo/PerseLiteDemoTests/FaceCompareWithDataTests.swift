@@ -4,7 +4,7 @@ import Foundation
 
 class FaceCompareWithDataTests: XCTestCase {
 
-    func testWithSameHuman() {
+    func test_with_same_human() {
         compareWithData(
             self,
             firstImageName: "human",
@@ -21,7 +21,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithDifferentHumans() {
+    func test_with_different_humans() {
         compareWithData(
             self,
             firstImageName: "human1",
@@ -38,7 +38,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithHumanAndNonHuman() {
+    func test_with_human_and_non_human() {
         compareWithData(
             self,
             firstImageName: "human",
@@ -51,7 +51,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithNonHumanAndHuman() {
+    func test_with_non_human_and_human() {
         compareWithData(
             self,
             firstImageName: "dog",
@@ -64,7 +64,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithNonHumanAndNonHuman() {
+    func test_with_non_human_and_non_human() {
         compareWithData(
             self,
             firstImageName: "dog",
@@ -77,20 +77,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithAPIKeyInvalid() {
-        compareWithData(
-            self,
-            firstImageName: "human",
-            secondImageName: "human2",
-            apiKey: ""
-        ) { detectResponse in
-            XCTFail("Back-end authorized invalid api token.")
-        } onError: { error in
-            XCTAssertEqual(error, "401")
-        }
-    }
-
-    func testWithImagePathsInvalid() {
+    func test_with_image_paths_invalid() {
         compareWithData(
             self,
             firstImageName: "test0",
@@ -106,7 +93,7 @@ class FaceCompareWithDataTests: XCTestCase {
         }
     }
 
-    func testWithNonHumans() {
+    func test_with_non_humans() {
         compareWithData(
             self,
             firstImageName: "dog",

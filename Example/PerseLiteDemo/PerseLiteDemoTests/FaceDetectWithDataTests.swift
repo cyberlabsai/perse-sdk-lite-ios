@@ -4,7 +4,7 @@ import Foundation
 
 class FaceDetectWithDataTests: XCTestCase {
 
-    func testWithHuman() {
+    func test_with_human() {
         detectWithData(
             self,
             imageName: "human",
@@ -16,7 +16,7 @@ class FaceDetectWithDataTests: XCTestCase {
         }
     }
 
-    func testWithNonHuman() {
+    func test_with_non_human() {
         detectWithData(
             self,
             imageName: "dog",
@@ -28,19 +28,7 @@ class FaceDetectWithDataTests: XCTestCase {
         }
     }
 
-    func testWithAPIKeyInvalid() {
-        detectWithData(
-            self,
-            imageName: "human",
-            apiKey: ""
-        ) { detectResponse in
-            XCTFail("Back-end authorized invalid api token.")
-        } onError: { error in
-            XCTAssertEqual(error, "401")
-        }
-    }
-
-    func testWithImagePathInvalid() {
+    func test_with_image_path_invalid() {
         detectWithData(
             self,
             imageName: "test",
