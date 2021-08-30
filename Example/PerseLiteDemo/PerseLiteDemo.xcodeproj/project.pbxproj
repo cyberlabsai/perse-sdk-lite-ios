@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		473A706C75D8CFF00C492CD5 /* Pods_PerseLiteDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerseLiteDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C06E54725D1F09A00E6770F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5C06E54725D1F09A00E6770F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5C06E5A925D1FBC500E6770F /* PerseLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PerseLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0D7B572656C9CB00A24232 /* human2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human2.jpeg; sourceTree = "<group>"; };
 		5C0D7B582656C9CB00A24232 /* human.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human.jpeg; sourceTree = "<group>"; };
@@ -632,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.cyberlabs.perselitedemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -665,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.cyberlabs.perselitedemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
