@@ -6,7 +6,7 @@ enum FileUtilsError: Error {
 }
 
 func getTempFilePath(name: String) -> String? {
-    guard let fileUrl: URL = Bundle(for: PerseLiteFaceDetectWithFileTests.self)
+    guard let fileUrl: URL = Bundle(for: FaceDetectWithFileTests.self)
         .url(
             forResource: name,
             withExtension: "jpeg"

@@ -430,13 +430,13 @@
                         <outlet property="faceImageView" destination="xxV-i1-DII" id="4xn-gJ-OdM"/>
                         <outlet property="faceSharpnessIcon" destination="WPu-kS-8TP" id="Qbt-0V-JkN"/>
                         <outlet property="faceSharpnessLabel" destination="erk-IZ-RD0" id="1Tm-FU-Kvw"/>
-                        <outlet property="faceUnderexposeIcon" destination="0Os-tg-VbW" id="0zn-tL-ISD"/>
-                        <outlet property="faceUnderexposeLabel" destination="wTh-wl-QgW" id="SQu-UW-mJp"/>
+                        <outlet property="faceUnderexposureIcon" destination="0Os-tg-VbW" id="0zn-tL-ISD"/>
+                        <outlet property="faceUnderexposureLabel" destination="wTh-wl-QgW" id="SQu-UW-mJp"/>
                         <outlet property="horizontalMovementLabel" destination="Vjh-Tq-NTe" id="gLs-by-UDj"/>
                         <outlet property="imageSharpnessIcon" destination="1MD-M9-0WD" id="uJz-SI-NOv"/>
                         <outlet property="imageSharpnessLabel" destination="tgb-NI-khN" id="XMq-xe-ZIG"/>
-                        <outlet property="imageUnderexposeIcon" destination="nPW-mh-2IT" id="xkj-Wh-JCE"/>
-                        <outlet property="imageUnderexposeLabel" destination="KXB-IT-YlQ" id="xd2-5b-bbB"/>
+                        <outlet property="imageUnderexposureIcon" destination="nPW-mh-2IT" id="xkj-Wh-JCE"/>
+                        <outlet property="imageUnderexposureLabel" destination="KXB-IT-YlQ" id="xd2-5b-bbB"/>
                         <outlet property="leftEyeIcon" destination="JXt-H2-LPQ" id="iQO-X1-Bvx"/>
                         <outlet property="leftEyeLabel" destination="fdh-29-Lok" id="k5l-oV-aYo"/>
                         <outlet property="rightEyeIcon" destination="CY9-uo-oyZ" id="CDJ-mn-DmU"/>

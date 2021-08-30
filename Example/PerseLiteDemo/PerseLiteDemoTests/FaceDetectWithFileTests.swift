@@ -2,10 +2,10 @@ import XCTest
 import PerseLite
 import Foundation
 
-class PerseLiteFaceDetectWithDataTests: XCTestCase {
+class FaceDetectWithFileTests: XCTestCase {
 
-    func testWithHuman() {
-        detectWithData(
+    func test_with_human() {
+        detectWithFile(
             self,
             imageName: "human",
             apiKey: Environment.apiKey
@@ -16,8 +16,8 @@ class PerseLiteFaceDetectWithDataTests: XCTestCase {
         }
     }
 
-    func testWithNonHuman() {
-        detectWithData(
+    func test_with_non_human() {
+        detectWithFile(
             self,
             imageName: "dog",
             apiKey: Environment.apiKey
@@ -28,20 +28,8 @@ class PerseLiteFaceDetectWithDataTests: XCTestCase {
         }
     }
 
-    func testWithAPIKeyInvalid() {
-        detectWithData(
-            self,
-            imageName: "human",
-            apiKey: ""
-        ) { detectResponse in
-            XCTFail("Back-end authorized invalid api token.")
-        } onError: { error in
-            XCTAssertEqual(error, "401")
-        }
-    }
-
-    func testWithImagePathInvalid() {
-        detectWithData(
+    func test_with_image_path_invalid() {
+        detectWithFile(
             self,
             imageName: "test",
             apiKey: Environment.apiKey

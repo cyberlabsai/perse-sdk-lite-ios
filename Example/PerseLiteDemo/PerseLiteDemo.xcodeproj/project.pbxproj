@@ -14,17 +14,18 @@
 		5C29525426543179008E35F7 /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5C29525326543179008E35F7 /* dog.jpeg */; };
 		5C29527E26543FEB008E35F7 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C29527D26543FEB008E35F7 /* FileUtils.swift */; };
 		5C29528226544A7B008E35F7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C29528126544A7B008E35F7 /* Environment.swift */; };
-		5C38E9FE265D5CB500922B91 /* PerseLiteFaceDetectWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38E9FD265D5CB500922B91 /* PerseLiteFaceDetectWithDataTests.swift */; };
+		5C38E9FE265D5CB500922B91 /* FaceDetectWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38E9FD265D5CB500922B91 /* FaceDetectWithDataTests.swift */; };
 		5C38EA06265D601B00922B91 /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38EA05265D601B00922B91 /* DataUtils.swift */; };
-		5C38EA12265D69C300922B91 /* PerseLiteFaceCompareWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38EA11265D69C300922B91 /* PerseLiteFaceCompareWithDataTests.swift */; };
+		5C38EA12265D69C300922B91 /* FaceCompareWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38EA11265D69C300922B91 /* FaceCompareWithDataTests.swift */; };
 		5C41242926554C8C00C02049 /* PerseLiteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C41242826554C8C00C02049 /* PerseLiteUtils.swift */; };
-		5C412453265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C412452265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift */; };
+		5C412453265594DA00C02049 /* FaceCompareWithFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C412452265594DA00C02049 /* FaceCompareWithFileTests.swift */; };
 		5C73AAD52681184E0028435B /* PerseLiteCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73AAD42681184E0028435B /* PerseLiteCameraViewController.swift */; };
 		5CB416AB2652F08E00B7D1EC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB416AA2652F08E00B7D1EC /* Environment.swift */; };
+		5CB8011E26D43DE40060B031 /* FaceEnrollmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8011D26D43DE40060B031 /* FaceEnrollmentTests.swift */; };
 		5CE123D8264AF36600D484A1 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE123D7264AF36600D484A1 /* FileUtils.swift */; };
 		5CE123ED264B087800D484A1 /* PerseLiteCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE123EC264B087800D484A1 /* PerseLiteCompareViewController.swift */; };
 		5CE1241C264C0F4E00D484A1 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE1241B264C0F4E00D484A1 /* TableCell.swift */; };
-		5CF64E722653F546004763E3 /* PerseLiteFaceDetectWithFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF64E712653F546004763E3 /* PerseLiteFaceDetectWithFileTests.swift */; };
+		5CF64E722653F546004763E3 /* FaceDetectWithFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF64E712653F546004763E3 /* FaceDetectWithFileTests.swift */; };
 		6176EFC2252E496D00F4D4DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176EFC1252E496D00F4D4DD /* AppDelegate.swift */; };
 		6176EFC4252E496D00F4D4DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176EFC3252E496D00F4D4DD /* SceneDelegate.swift */; };
 		6176EFC9252E496D00F4D4DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6176EFC7252E496D00F4D4DD /* Main.storyboard */; };
@@ -47,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		473A706C75D8CFF00C492CD5 /* Pods_PerseLiteDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerseLiteDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C06E54725D1F09A00E6770F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5C06E54725D1F09A00E6770F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5C06E5A925D1FBC500E6770F /* PerseLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PerseLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0D7B572656C9CB00A24232 /* human2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human2.jpeg; sourceTree = "<group>"; };
 		5C0D7B582656C9CB00A24232 /* human.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human.jpeg; sourceTree = "<group>"; };
@@ -55,19 +56,20 @@
 		5C29525326543179008E35F7 /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpeg; sourceTree = "<group>"; };
 		5C29527D26543FEB008E35F7 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		5C29528126544A7B008E35F7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		5C38E9FD265D5CB500922B91 /* PerseLiteFaceDetectWithDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteFaceDetectWithDataTests.swift; sourceTree = "<group>"; };
+		5C38E9FD265D5CB500922B91 /* FaceDetectWithDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectWithDataTests.swift; sourceTree = "<group>"; };
 		5C38EA05265D601B00922B91 /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
-		5C38EA11265D69C300922B91 /* PerseLiteFaceCompareWithDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteFaceCompareWithDataTests.swift; sourceTree = "<group>"; };
+		5C38EA11265D69C300922B91 /* FaceCompareWithDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCompareWithDataTests.swift; sourceTree = "<group>"; };
 		5C41242826554C8C00C02049 /* PerseLiteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteUtils.swift; sourceTree = "<group>"; };
-		5C412452265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteFaceCompareWithFileTests.swift; sourceTree = "<group>"; };
+		5C412452265594DA00C02049 /* FaceCompareWithFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCompareWithFileTests.swift; sourceTree = "<group>"; };
 		5C73AAD42681184E0028435B /* PerseLiteCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteCameraViewController.swift; sourceTree = "<group>"; };
 		5C99706026C56F190005D2D1 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5CB416AA2652F08E00B7D1EC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		5CB8011D26D43DE40060B031 /* FaceEnrollmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceEnrollmentTests.swift; sourceTree = "<group>"; };
 		5CE123D7264AF36600D484A1 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		5CE123EC264B087800D484A1 /* PerseLiteCompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerseLiteCompareViewController.swift; sourceTree = "<group>"; };
 		5CE1241B264C0F4E00D484A1 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		5CF64E672653F51F004763E3 /* PerseLiteDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerseLiteDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CF64E712653F546004763E3 /* PerseLiteFaceDetectWithFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerseLiteFaceDetectWithFileTests.swift; sourceTree = "<group>"; };
+		5CF64E712653F546004763E3 /* FaceDetectWithFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetectWithFileTests.swift; sourceTree = "<group>"; };
 		5CF64E732653F555004763E3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6176EFBE252E496D00F4D4DD /* PerseLiteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerseLiteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6176EFC1252E496D00F4D4DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,14 +122,15 @@
 			children = (
 				5CF64E732653F555004763E3 /* Info.plist */,
 				5C2952522654316E008E35F7 /* Assets */,
-				5C412452265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift */,
-				5C38EA11265D69C300922B91 /* PerseLiteFaceCompareWithDataTests.swift */,
+				5C412452265594DA00C02049 /* FaceCompareWithFileTests.swift */,
+				5C38EA11265D69C300922B91 /* FaceCompareWithDataTests.swift */,
 				5C41242826554C8C00C02049 /* PerseLiteUtils.swift */,
 				5C29527D26543FEB008E35F7 /* FileUtils.swift */,
 				5C29528126544A7B008E35F7 /* Environment.swift */,
-				5C38E9FD265D5CB500922B91 /* PerseLiteFaceDetectWithDataTests.swift */,
-				5CF64E712653F546004763E3 /* PerseLiteFaceDetectWithFileTests.swift */,
+				5C38E9FD265D5CB500922B91 /* FaceDetectWithDataTests.swift */,
+				5CF64E712653F546004763E3 /* FaceDetectWithFileTests.swift */,
 				5C38EA05265D601B00922B91 /* DataUtils.swift */,
+				5CB8011D26D43DE40060B031 /* FaceEnrollmentTests.swift */,
 			);
 			path = PerseLiteDemoTests;
 			sourceTree = "<group>";
@@ -384,13 +387,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF64E722653F546004763E3 /* PerseLiteFaceDetectWithFileTests.swift in Sources */,
-				5C38E9FE265D5CB500922B91 /* PerseLiteFaceDetectWithDataTests.swift in Sources */,
+				5CF64E722653F546004763E3 /* FaceDetectWithFileTests.swift in Sources */,
+				5C38E9FE265D5CB500922B91 /* FaceDetectWithDataTests.swift in Sources */,
 				5C29528226544A7B008E35F7 /* Environment.swift in Sources */,
 				5C38EA06265D601B00922B91 /* DataUtils.swift in Sources */,
-				5C38EA12265D69C300922B91 /* PerseLiteFaceCompareWithDataTests.swift in Sources */,
+				5C38EA12265D69C300922B91 /* FaceCompareWithDataTests.swift in Sources */,
 				5C29527E26543FEB008E35F7 /* FileUtils.swift in Sources */,
-				5C412453265594DA00C02049 /* PerseLiteFaceCompareWithFileTests.swift in Sources */,
+				5CB8011E26D43DE40060B031 /* FaceEnrollmentTests.swift in Sources */,
+				5C412453265594DA00C02049 /* FaceCompareWithFileTests.swift in Sources */,
 				5C41242926554C8C00C02049 /* PerseLiteUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.cyberlabs.perselitedemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -661,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.cyberlabs.perselitedemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

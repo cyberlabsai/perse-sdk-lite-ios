@@ -114,7 +114,7 @@ class PerseLiteDetectViewController:
                 detectResponse.totalFaces
             ))
 
-            guard let faces = detectResponse.faces as Array<FaceResponse>? else {
+            guard let faces = detectResponse.faces as Array<PerseAPIResponse.Face.Face>? else {
                 return
             }
             
@@ -140,7 +140,7 @@ class PerseLiteDetectViewController:
                     face.faceMetrics.overexposure
                 ))
                 self.tablecells.append(TableCell(
-                    "Underexpose",
+                    "Underexposure",
                     face.faceMetrics.underexposure
                 ))
                 self.tablecells.append(TableCell(
@@ -154,7 +154,7 @@ class PerseLiteDetectViewController:
                 detectResponse.imageMetrics.overexposure
             ))
             self.tablecells.append(TableCell(
-                "Underexpose",
+                "Underexposure",
                 detectResponse.imageMetrics.underexposure
             ))
             self.tablecells.append(TableCell(

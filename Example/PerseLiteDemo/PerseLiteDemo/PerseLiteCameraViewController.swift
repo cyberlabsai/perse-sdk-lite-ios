@@ -23,14 +23,14 @@ class PerseLiteCameraViewController:
     @IBOutlet var verticalMovementLabel: UILabel!
     @IBOutlet var tiltMovementLabel: UILabel!
 
-    @IBOutlet var faceUnderexposeLabel: UILabel!
-    @IBOutlet var faceUnderexposeIcon: UIImageView!
+    @IBOutlet var faceUnderexposureLabel: UILabel!
+    @IBOutlet var faceUnderexposureIcon: UIImageView!
 
     @IBOutlet var faceSharpnessLabel: UILabel!
     @IBOutlet var faceSharpnessIcon: UIImageView!
 
-    @IBOutlet var imageUnderexposeLabel: UILabel!
-    @IBOutlet var imageUnderexposeIcon: UIImageView!
+    @IBOutlet var imageUnderexposureLabel: UILabel!
+    @IBOutlet var imageUnderexposureIcon: UIImageView!
 
     @IBOutlet var imageSharpnessLabel: UILabel!
     @IBOutlet var imageSharpnessIcon: UIImageView!
@@ -86,14 +86,14 @@ class PerseLiteCameraViewController:
             }
             
             self.faceImageView.image = image
-            let face: FaceResponse = detectResponse.faces[0]
+            let face: PerseAPIResponse.Face.Face = detectResponse.faces[0]
 
             self.setSpoofingValidation(
                 valid: face.livenessScore >= detectResponse.defaultThresholds.liveness
             )
             self.handleDisplayProbability(
-                label: self.faceUnderexposeLabel,
-                icon: self.faceUnderexposeIcon,
+                label: self.faceUnderexposureLabel,
+                icon: self.faceUnderexposureIcon,
                 validation: face.faceMetrics.underexposure > detectResponse.defaultThresholds.underexposure,
                 value: face.faceMetrics.underexposure
             )
@@ -104,8 +104,8 @@ class PerseLiteCameraViewController:
                 value: face.faceMetrics.sharpness
             )
             self.handleDisplayProbability(
-                label: self.imageUnderexposeLabel,
-                icon: self.imageUnderexposeIcon,
+                label: self.imageUnderexposureLabel,
+                icon: self.imageUnderexposureIcon,
                 validation: detectResponse.imageMetrics.underexposure > detectResponse.defaultThresholds.underexposure,
                 value: detectResponse.imageMetrics.underexposure
             )
@@ -247,12 +247,12 @@ class PerseLiteCameraViewController:
         self.horizontalMovementLabel.text = "-"
         self.verticalMovementLabel.text = "-"
         self.tiltMovementLabel.text = "-"
-        self.faceUnderexposeLabel.text = "-"
-        self.handleResetIcon(icon: self.faceUnderexposeIcon)
+        self.faceUnderexposureLabel.text = "-"
+        self.handleResetIcon(icon: self.faceUnderexposureIcon)
         self.faceSharpnessLabel.text = "-"
         self.handleResetIcon(icon: self.faceSharpnessIcon)
-        self.imageUnderexposeLabel.text = "-"
-        self.handleResetIcon(icon: self.imageUnderexposeIcon)
+        self.imageUnderexposureLabel.text = "-"
+        self.handleResetIcon(icon: self.imageUnderexposureIcon)
         self.imageSharpnessLabel.text = "-"
         self.handleResetIcon(icon: self.imageSharpnessIcon)
         self.cameraView.setDetectionBoxColor(0, 1, 1, 1)
