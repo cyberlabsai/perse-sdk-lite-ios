@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.name         = "PerseLite"
-  spec.version      = "0.3.0"
+  spec.version      = "0.3.1"
   spec.summary      = "Perse SDK Lite iOS"
   spec.description  = <<-DESC
     "This SDK provides abstracts the communication with the Perse's API endpoints and also convert the response from json to a pre-defined responses."
