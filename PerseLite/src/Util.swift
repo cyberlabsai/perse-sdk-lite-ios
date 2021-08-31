@@ -68,13 +68,13 @@ extension Data {
         }
     }
     
-    public func createResponse() throws -> PerseAPIResponse.Enrollment.Face.Create {
+    public func createResponse() throws -> PerseAPIResponse.Face.Enrollment.Create {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: PerseAPIResponse.Enrollment.Face.Create = try decoder.decode(
-                PerseAPIResponse.Enrollment.Face.Create.self,
+            let response: PerseAPIResponse.Face.Enrollment.Create = try decoder.decode(
+                PerseAPIResponse.Face.Enrollment.Create.self,
                 from: self
             )
             return response
@@ -83,13 +83,13 @@ extension Data {
         }
     }
     
-    public func uploadResponse() throws -> PerseAPIResponse.Enrollment.Face.Update {
+    public func uploadResponse() throws -> PerseAPIResponse.Face.Enrollment.Update {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: PerseAPIResponse.Enrollment.Face.Update = try decoder.decode(
-                PerseAPIResponse.Enrollment.Face.Update.self,
+            let response: PerseAPIResponse.Face.Enrollment.Update = try decoder.decode(
+                PerseAPIResponse.Face.Enrollment.Update.self,
                 from: self
             )
             return response
@@ -98,13 +98,13 @@ extension Data {
         }
     }
     
-    public func readResponse() throws -> PerseAPIResponse.Enrollment.Face.Read {
+    public func readResponse() throws -> PerseAPIResponse.Face.Enrollment.Read {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: PerseAPIResponse.Enrollment.Face.Read = try decoder.decode(
-                PerseAPIResponse.Enrollment.Face.Read.self,
+            let response: PerseAPIResponse.Face.Enrollment.Read = try decoder.decode(
+                PerseAPIResponse.Face.Enrollment.Read.self,
                 from: self
             )
             return response
@@ -113,13 +113,13 @@ extension Data {
         }
     }
     
-    public func deleteResponse() throws -> PerseAPIResponse.Enrollment.Face.Delete {
+    public func deleteResponse() throws -> PerseAPIResponse.Face.Enrollment.Delete {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
                         
-            let response: PerseAPIResponse.Enrollment.Face.Delete = try decoder.decode(
-                PerseAPIResponse.Enrollment.Face.Delete.self,
+            let response: PerseAPIResponse.Face.Enrollment.Delete = try decoder.decode(
+                PerseAPIResponse.Face.Enrollment.Delete.self,
                 from: self
             )
             return response
