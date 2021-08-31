@@ -21,7 +21,7 @@ public class Enrollment {
     
     public func create(
         _ filePath: String,
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Create) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Create) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         guard let url = URL(string: filePath) else {
@@ -42,7 +42,7 @@ public class Enrollment {
 
     public func create(
         _ data: Data,
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Create) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Create) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/enrollment")
@@ -73,7 +73,7 @@ public class Enrollment {
             
             if uploadResponse.statusCode == 200 {
                 do {
-                    guard let detectResponse: PerseAPIResponse.Enrollment.Face.Create = try result.data?.createResponse() else {
+                    guard let detectResponse: PerseAPIResponse.Face.Enrollment.Create = try result.data?.createResponse() else {
                         return
                     }
                     onSuccess(detectResponse)
@@ -89,7 +89,7 @@ public class Enrollment {
     public func update(
         _ filePath: String,
         _ userToken: String,
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Update) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Update) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         guard let url = URL(string: filePath) else {
@@ -112,7 +112,7 @@ public class Enrollment {
     public func update(
         _ data: Data,
         _ userToken: String,
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Update) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Update) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/enrollment")
@@ -147,7 +147,7 @@ public class Enrollment {
             
             if response.statusCode == 200 {
                 do {
-                    guard let uploadResponse: PerseAPIResponse.Enrollment.Face.Update = try result.data?.uploadResponse() else {
+                    guard let uploadResponse: PerseAPIResponse.Face.Enrollment.Update = try result.data?.uploadResponse() else {
                         return
                     }
                     onSuccess(uploadResponse)
@@ -161,7 +161,7 @@ public class Enrollment {
     }
     
     public func read(
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Read) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Read) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/enrollment/list")
@@ -183,7 +183,7 @@ public class Enrollment {
                               
             if response.statusCode == 200 {
                 do {
-                    guard let response: PerseAPIResponse.Enrollment.Face.Read = try result.data?.readResponse() else {
+                    guard let response: PerseAPIResponse.Face.Enrollment.Read = try result.data?.readResponse() else {
                         return
                     }
                     onSuccess(response)
@@ -198,7 +198,7 @@ public class Enrollment {
     
     public func delete(
         _ userToken: String,
-        onSuccess: @escaping (PerseAPIResponse.Enrollment.Face.Delete) -> Void,
+        onSuccess: @escaping (PerseAPIResponse.Face.Enrollment.Delete) -> Void,
         onError: @escaping (String, String) -> Void
     ) {
         let to = PerseLite.url.appending("face/enrollment/\(userToken)")
@@ -220,7 +220,7 @@ public class Enrollment {
                               
             if response.statusCode == 200 {
                 do {
-                    guard let response: PerseAPIResponse.Enrollment.Face.Delete = try result.data?.deleteResponse() else {
+                    guard let response: PerseAPIResponse.Face.Enrollment.Delete = try result.data?.deleteResponse() else {
                         return
                     }
                     onSuccess(response)

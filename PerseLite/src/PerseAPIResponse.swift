@@ -66,10 +66,8 @@ public struct PerseAPIResponse {
             public let timeTaken: Float
             public let defaultThresholds: CompareThresholds
         }
-    }
-    
-    public struct Enrollment {
-        public struct Face {
+        
+        public struct Enrollment {
             public struct Create: Decodable {
                 public let userToken: String
                 public let timeTaken: Float
